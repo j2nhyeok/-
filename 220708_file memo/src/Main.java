@@ -69,9 +69,9 @@ public class Main extends JFrame{
 				try {
 					bf = new BufferedReader(new FileReader(file));
 					String line;
-					
+					textArea.setText("");
 					while((line = bf.readLine()) != null) {
-						System.out.println(line);
+						textArea.append(line + "\n");
 				
 						
 					}
@@ -88,7 +88,7 @@ public class Main extends JFrame{
 						}
 					}
 				}	
-				textArea.setText("");
+		
 			}
 		});	
 		
@@ -135,6 +135,8 @@ public class Main extends JFrame{
 					}
 					
 				}
+				
+				textArea.setText("");
 			}
 		});
 		
