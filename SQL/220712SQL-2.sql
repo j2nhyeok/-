@@ -11,11 +11,11 @@ SELECT * FROM employees;
 SELECT * FROM employees WHERE First_Name = 'John';
 
 -- employees(직원) 테이블의 Last_Name(성) 열의 값인 'John'을 포함하는 직원 조회
-SELECT * FROM employees WHERE Last_Name = '%John%';
+SELECT * FROM employees WHERE Last_Name LIKE '%John%';
 
 -- employees(직원) 테이블의 이름의 값이 6글자인 직원 조회
 SELECT * FROM employees WHERE First_Name = '______';
-
+SELECT * FROM employees WHERE char_length(First_Name) = 6;
 -- employees(직원) 테이블의 Salary(연봉) 열의 값이 10000 ~15000인 직원 조회
 SELECT * FROM employees WHERE Salary BETWEEN 10000 AND 15000;
 
